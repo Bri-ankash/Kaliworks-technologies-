@@ -13,7 +13,7 @@ export default function Hero(){
           <span style={{width:7,height:7,borderRadius:'50%',background:'var(--blue)',boxShadow:'0 0 8px var(--blue)',animation:'blink 1.5s infinite',display:'inline-block'}}/>
           Nairobi, Kenya · Available Now
         </div>
-        <h1 style={{fontFamily:'Syne,sans-serif',fontSize:'clamp(42px,8vw,84px)',fontWeight:800,lineHeight:1.03,letterSpacing:'-3px',marginBottom:24,...t('0.12s')}}>
+        <h1 style={{fontFamily:'Urbanist,sans-serif',fontSize:'clamp(42px,8vw,84px)',fontWeight:800,lineHeight:1.03,letterSpacing:'-3px',marginBottom:24,...t('0.12s')}}>
           We Build <span style={{color:'var(--blue)'}}>Digital</span><br/>Systems That<br/><span style={{color:'var(--faint)'}}>Scale & Grow</span>
         </h1>
         <p style={{fontSize:'clamp(16px,1.8vw,19px)',color:'var(--muted)',lineHeight:1.75,maxWidth:580,margin:'0 auto 44px',fontWeight:300,...t('0.24s')}}>

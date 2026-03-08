@@ -13,7 +13,7 @@ export default function Contact(){
       </div>
       <div className="reveal" style={{maxWidth:720,margin:'56px auto 0',background:'var(--card)',border:'1px solid var(--border2)',borderRadius:24,padding:'56px 44px',position:'relative',overflow:'hidden'}}>
         <div style={{position:'absolute',top:0,left:0,right:0,height:2,background:'linear-gradient(90deg,transparent,var(--blue),transparent)'}}/>
-        <div style={{fontFamily:'Syne,sans-serif',fontSize:22,fontWeight:800,marginBottom:6}}>Kaliworks Technologies</div>
+        <div style={{fontFamily:'Urbanist,sans-serif',fontSize:22,fontWeight:800,marginBottom:6}}>Kaliworks Technologies</div>
         <div style={{color:'var(--muted)',fontSize:14,fontWeight:300,marginBottom:40}}>Your technology partner in Kenya 🇰🇪 · We build, you grow.</div>
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:14}} className="c-grid">
           {methods.map(c=>(

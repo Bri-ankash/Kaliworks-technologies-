@@ -22,7 +22,7 @@ export default function FAQ(){
       <div style={{maxWidth:760,margin:'56px auto 0',display:'flex',flexDirection:'column',gap:12}}>
         {faqs.map((f,i)=>(
           <div key={i} className="reveal" style={{background:'var(--card)',border:`1px solid ${open===i?'var(--border2)':'var(--border)'}`,borderRadius:14,overflow:'hidden'}}>
-            <div onClick={()=>setOpen(open===i?null:i)} style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'22px 26px',cursor:'pointer',fontFamily:'Syne,sans-serif',fontSize:15,fontWeight:700,gap:16,userSelect:'none'}}>
+            <div onClick={()=>setOpen(open===i?null:i)} style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'22px 26px',cursor:'pointer',fontFamily:'Urbanist,sans-serif',fontSize:15,fontWeight:700,gap:16,userSelect:'none'}}>
               {f.q}
               <span style={{color:'var(--blue)',fontSize:20,transition:'transform 0.3s',transform:open===i?'rotate(45deg)':'rotate(0)',flexShrink:0}}>+</span>
             </div>

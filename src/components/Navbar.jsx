@@ -9,7 +9,7 @@ export default function Navbar(){
       <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:100,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'14px 6%',background:'rgba(3,6,8,0.92)',backdropFilter:'blur(24px)',borderBottom:'1px solid var(--border)'}}>
         <a href="#" style={{display:'flex',alignItems:'center',gap:10}}>
           <Logo/>
-          <span style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:20,color:'var(--white)'}}>Kali<span style={{color:'var(--blue)'}}>core</span></span>
+          <span style={{fontFamily:'Urbanist,sans-serif',fontWeight:800,fontSize:20,color:'var(--white)'}}>Kali<span style={{color:'var(--blue)'}}>core</span></span>
         </a>
         <ul className="hide-mobile" style={{display:'flex',gap:32,listStyle:'none'}}>
           {links.map(l=>(

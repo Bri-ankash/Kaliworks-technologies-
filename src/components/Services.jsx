@@ -19,9 +19,9 @@ export default function Services(){
           <div key={s.n} className="reveal" style={{background:'var(--card)',padding:'42px 34px',position:'relative',overflow:'hidden',transition:'all 0.3s',cursor:'default'}}
             onMouseEnter={e=>{e.currentTarget.style.background='var(--card2)';e.currentTarget.style.transform='translateY(-5px)'}}
             onMouseLeave={e=>{e.currentTarget.style.background='var(--card)';e.currentTarget.style.transform='translateY(0)'}}>
-            <span style={{position:'absolute',top:18,right:22,fontFamily:'Syne,sans-serif',fontSize:50,fontWeight:800,color:'rgba(14,165,233,0.05)',letterSpacing:'-3px'}}>{s.n}</span>
+            <span style={{position:'absolute',top:18,right:22,fontFamily:'Urbanist,sans-serif',fontSize:50,fontWeight:800,color:'rgba(14,165,233,0.05)',letterSpacing:'-3px'}}>{s.n}</span>
             <span style={{fontSize:32,marginBottom:20,display:'block'}}>{s.icon}</span>
-            <h3 style={{fontFamily:'Syne,sans-serif',fontSize:18,fontWeight:700,marginBottom:10}}>{s.title}</h3>
+            <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:18,fontWeight:700,marginBottom:10}}>{s.title}</h3>
             <p style={{color:'var(--muted)',fontSize:13,lineHeight:1.75,fontWeight:300}}>{s.desc}</p>
             <span style={{display:'inline-block',marginTop:16,background:'rgba(14,165,233,0.08)',border:'1px solid rgba(14,165,233,0.18)',color:'var(--blue3)',fontSize:11,padding:'4px 12px',borderRadius:100,fontWeight:600}}>{s.tag}</span>
           </div>

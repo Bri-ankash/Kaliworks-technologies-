@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700&display=swap');
 :root{--black:#030608;--deep:#060b12;--card:#0a1220;--card2:#0e1928;--blue:#0ea5e9;--blue2:#38bdf8;--blue3:#7dd3fc;--white:#e8f4ff;--muted:#7a99bb;--faint:#3a5270;--border:rgba(14,165,233,0.12);--border2:rgba(14,165,233,0.28)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body{background:var(--black);color:var(--white);font-family:'Manrope',sans-serif;overflow-x:hidden}
 body::after{content:'';position:fixed;top:0;left:0;right:0;height:100vh;background:radial-gradient(ellipse 60% 50% at 50% -10%,rgba(14,165,233,0.07) 0%,transparent 70%);pointer-events:none;z-index:0}
 .reveal{opacity:0;transform:translateY(34px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:24px;height:2px;background:var(--blue);border-radius:2px;display:inline-block}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.08;margin-bottom:16px}
+.sec-title{font-family:'Urbanist',sans-serif;font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.08;margin-bottom:16px}
 .sec-sub{color:var(--muted);font-size:16px;line-height:1.75;max-width:500px;font-weight:300}
 section{padding:96px 6%;position:relative;z-index:1}
 a{text-decoration:none;color:inherit}

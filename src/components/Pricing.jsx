@@ -17,9 +17,9 @@ export default function Pricing(){
             onMouseEnter={e=>e.currentTarget.style.transform='translateY(-5px)'}
             onMouseLeave={e=>e.currentTarget.style.transform='translateY(0)'}>
             {p.popular&&<div style={{position:'absolute',top:-12,left:'50%',transform:'translateX(-50%)',background:'var(--blue)',color:'#000',fontSize:11,fontWeight:800,padding:'4px 16px',borderRadius:100,whiteSpace:'nowrap'}}>✦ Most Popular</div>}
-            <div style={{fontFamily:'Syne,sans-serif',fontSize:16,fontWeight:800,marginBottom:6}}>{p.name}</div>
+            <div style={{fontFamily:'Urbanist,sans-serif',fontSize:16,fontWeight:800,marginBottom:6}}>{p.name}</div>
             <div style={{color:'var(--muted)',fontSize:12,fontWeight:300,marginBottom:24,lineHeight:1.5}}>{p.desc}</div>
-            <div style={{fontFamily:'Syne,sans-serif',fontSize:36,fontWeight:800,color:'var(--blue)',letterSpacing:'-2px',lineHeight:1,marginBottom:4}}>{p.price}<span style={{fontSize:13,color:'var(--muted)',fontFamily:'DM Sans,sans-serif',fontWeight:300,marginLeft:4}}>starting from</span></div>
+            <div style={{fontFamily:'Urbanist,sans-serif',fontSize:36,fontWeight:800,color:'var(--blue)',letterSpacing:'-2px',lineHeight:1,marginBottom:4}}>{p.price}<span style={{fontSize:13,color:'var(--muted)',fontFamily:'Manrope,sans-serif',fontWeight:300,marginLeft:4}}>starting from</span></div>
             <div style={{fontSize:11,color:'var(--faint)',marginBottom:24}}>{p.note}</div>
             <hr style={{border:'none',borderTop:'1px solid var(--border)',marginBottom:20}}/>
             <ul style={{listStyle:'none',display:'flex',flexDirection:'column',gap:10,marginBottom:24}}>

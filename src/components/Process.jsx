@@ -18,8 +18,8 @@ export default function Process(){
           <div key={s.n} className="reveal" style={{background:'var(--black)',padding:'42px 28px',transition:'background 0.25s'}}
             onMouseEnter={e=>e.currentTarget.style.background='var(--card)'}
             onMouseLeave={e=>e.currentTarget.style.background='var(--black)'}>
-            <div style={{fontFamily:'Syne,sans-serif',fontSize:58,fontWeight:800,color:'rgba(14,165,233,0.07)',letterSpacing:'-4px',lineHeight:1,marginBottom:22}}>{s.n}</div>
-            <h3 style={{fontFamily:'Syne,sans-serif',fontSize:16,fontWeight:700,marginBottom:8}}>{s.title}</h3>
+            <div style={{fontFamily:'Urbanist,sans-serif',fontSize:58,fontWeight:800,color:'rgba(14,165,233,0.07)',letterSpacing:'-4px',lineHeight:1,marginBottom:22}}>{s.n}</div>
+            <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:16,fontWeight:700,marginBottom:8}}>{s.title}</h3>
             <p style={{color:'var(--muted)',fontSize:13,lineHeight:1.7,fontWeight:300}}>{s.desc}</p>
           </div>
         ))}

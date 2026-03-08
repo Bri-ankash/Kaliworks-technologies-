@@ -22,7 +22,7 @@ export default function Portfolio(){
             <div style={{height:150,display:'flex',alignItems:'center',justifyContent:'center',fontSize:48,background:p.bg}}>{p.icon}</div>
             <div style={{padding:22}}>
               <div style={{fontSize:10,fontWeight:700,letterSpacing:'1.5px',textTransform:'uppercase',color:'var(--blue)',marginBottom:8}}>{p.cat}</div>
-              <h3 style={{fontFamily:'Syne,sans-serif',fontSize:16,fontWeight:700,marginBottom:8}}>{p.title}</h3>
+              <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:16,fontWeight:700,marginBottom:8}}>{p.title}</h3>
               <p style={{color:'var(--muted)',fontSize:12,lineHeight:1.65,fontWeight:300}}>{p.desc}</p>
               <div style={{display:'flex',flexWrap:'wrap',gap:6,marginTop:14}}>
                 {p.tags.map(t=><span key={t} style={{background:'rgba(14,165,233,0.07)',color:'var(--muted)',fontSize:10,padding:'3px 10px',borderRadius:100}}>{t}</span>)}
