@@ -16,7 +16,7 @@ export default function Loader(){
     <div style={{position:'fixed',inset:0,background:'var(--black)',zIndex:9999,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',opacity:fade?0:1,transition:'opacity 0.5s ease',pointerEvents:fade?'none':'all'}}>
       <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:32}}>
         <Logo/>
-        <span style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:24,color:'var(--white)'}}>Nexa<span style={{color:'var(--blue)'}}>core</span></span>
+        <span style={{fontFamily:'Syne,sans-serif',fontWeight:800,fontSize:24,color:'var(--white)'}}>Kali<span style={{color:'var(--blue)'}}>core</span></span>
       </div>
       <div style={{width:200,height:2,background:'var(--card)',borderRadius:2,overflow:'hidden'}}>
         <div style={{height:'100%',background:'linear-gradient(90deg,var(--blue),var(--blue2))',borderRadius:2,animation:'load 1.8s ease forwards'}}/>

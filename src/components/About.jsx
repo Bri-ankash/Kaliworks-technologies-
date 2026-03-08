@@ -19,7 +19,7 @@ export default function About(){
           </div>
         </div>
         <div className="reveal">
-          <p style={{color:'var(--muted)',fontSize:15,lineHeight:1.8,fontWeight:300,marginBottom:20}}><strong style={{color:'var(--white)',fontWeight:600}}>Nexacore Technologies</strong> was founded with one clear mission: to make professional-grade technology accessible to every business in Kenya, regardless of size or budget.</p>
+          <p style={{color:'var(--muted)',fontSize:15,lineHeight:1.8,fontWeight:300,marginBottom:20}}><strong style={{color:'var(--white)',fontWeight:600}}>Kaliworks Technologies</strong> was founded with one clear mission: to make professional-grade technology accessible to every business in Kenya, regardless of size or budget.</p>
           <p style={{color:'var(--muted)',fontSize:15,lineHeight:1.8,fontWeight:300,marginBottom:20}}>We believe great software should not be a luxury. Small businesses, startups, chamas, schools, and entrepreneurs deserve tools that actually work — and that's exactly what we build.</p>
           <p style={{color:'var(--muted)',fontSize:15,lineHeight:1.8,fontWeight:300,marginBottom:24}}>Every project gets our full attention, from the first conversation to the final launch and beyond. We don't just ship code — we build relationships.</p>
           <div style={{background:'rgba(14,165,233,0.05)',border:'1px solid rgba(14,165,233,0.2)',borderLeft:'3px solid var(--blue)',borderRadius:'0 10px 10px 0',padding:'16px 20px'}}>

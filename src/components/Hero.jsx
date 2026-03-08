@@ -17,7 +17,7 @@ export default function Hero(){
           We Build <span style={{color:'var(--blue)'}}>Digital</span><br/>Systems That<br/><span style={{color:'var(--faint)'}}>Scale & Grow</span>
         </h1>
         <p style={{fontSize:'clamp(16px,1.8vw,19px)',color:'var(--muted)',lineHeight:1.75,maxWidth:580,margin:'0 auto 44px',fontWeight:300,...t('0.24s')}}>
-          Nexacore Technologies designs and builds websites, mobile apps, SaaS platforms, and web management systems for businesses across Kenya and beyond.
+          Kaliworks Technologies designs and builds websites, mobile apps, SaaS platforms, and web management systems for businesses across Kenya and beyond.
         </p>
         <div style={{display:'flex',gap:14,justifyContent:'center',flexWrap:'wrap',...t('0.36s')}}>
           <a href="#services" style={{background:'var(--blue)',color:'#000',padding:'14px 32px',borderRadius:10,fontWeight:700,fontSize:15,boxShadow:'0 0 40px rgba(14,165,233,0.25)'}}>Explore Services</a>
