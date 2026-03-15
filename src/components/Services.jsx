@@ -31,14 +31,14 @@ export default function Services(){
 
   return(
     <section id="services" style={{background:'#060b12'}}>
-      <div className="reveal">
+      <div className="reveal visible">
         <div className="eyebrow">What We Do</div>
         <h2 className="sec-title">20 Digital Solutions<br/>Built for Kenya</h2>
         <p className="sec-sub">From simple websites to complex SaaS — everything your business needs online.</p>
       </div>
 
       {/* TABS */}
-      <div style={{display:'flex',gap:8,flexWrap:'wrap',marginTop:40,marginBottom:40}} className="reveal">
+      <div style={{display:'flex',gap:8,flexWrap:'wrap',marginTop:40,marginBottom:40}} className="reveal visible">
         {TABS.map(tab=>(
           <button key={tab} onClick={()=>setActive(tab)}
             style={{padding:'9px 20px',borderRadius:100,border:'none',cursor:'pointer',fontWeight:600,fontSize:13,transition:'all 0.2s',
@@ -53,7 +53,7 @@ export default function Services(){
       {/* GRID */}
       <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:1,background:'rgba(14,165,233,0.08)'}} className="svc-grid">
         {filtered.map((s,i)=>(
-          <div key={s.n} className="reveal" style={{background:'#0a1220',padding:'28px 22px',position:'relative',overflow:'hidden',transition:'all 0.3s',animationDelay:`${i*50}ms`}}
+          <div key={s.n} className="reveal visible" style={{background:'#0a1220',padding:'28px 22px',position:'relative',overflow:'hidden',transition:'all 0.3s',animationDelay:`${i*50}ms`}}
             onMouseEnter={e=>{e.currentTarget.style.background='#0e1928';e.currentTarget.style.transform='translateY(-4px)'}}
             onMouseLeave={e=>{e.currentTarget.style.background='#0a1220';e.currentTarget.style.transform='translateY(0)'}}>
             <div style={{position:'absolute',top:0,left:0,right:0,height:2,background:'linear-gradient(90deg,#0ea5e9,transparent)'}}/>

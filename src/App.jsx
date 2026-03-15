@@ -8,8 +8,13 @@ import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import Stats from './components/Stats'
 import Services from './components/Services'
+import WhyUs from './components/WhyUs'
+import Industries from './components/Industries'
+import BuiltForKenya from './components/BuiltForKenya'
 import About from './components/About'
 import Portfolio from './components/Portfolio'
+import Estimator from './components/Estimator'
+import CTABanner from './components/CTABanner'
 import Pricing from './components/Pricing'
 import Process from './components/Process'
 import FAQ from './components/FAQ'
@@ -42,8 +47,13 @@ function MainSite(){
       <Marquee/>
       <Stats/>
       <Services/>
+      <WhyUs/>
+      <Industries/>
+      <BuiltForKenya/>
+      <CTABanner/>
       <About/>
       <Portfolio/>
+      <Estimator/>
       <Pricing/>
       <Process/>
       <FAQ/>
