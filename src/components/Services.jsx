@@ -67,6 +67,9 @@ export default function Services(){
           </div>
         ))}
       </div>
+      <div style={{textAlign:'center',marginTop:32,padding:'20px',background:'rgba(14,165,233,0.04)',border:'1px solid rgba(14,165,233,0.12)',borderRadius:12}}>
+        <p style={{color:'#7a99bb',fontSize:14}}>These are just some of our services. <a href="#contact" style={{color:'#0ea5e9',fontWeight:600,textDecoration:'none'}}>Contact us</a> with any digital challenge — if it can be built, we build it. 🚀</p>
+      </div>
       <style>{`
         @media(max-width:1100px){.svc-grid{grid-template-columns:repeat(3,1fr)!important}}
         @media(max-width:768px){.svc-grid{grid-template-columns:repeat(2,1fr)!important}}
@@ -75,3 +78,4 @@ export default function Services(){
     </section>
   )
 }
+// note: "and more" line added below grid in JSX
