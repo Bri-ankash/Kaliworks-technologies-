@@ -71,7 +71,7 @@ export default function Reviews(){
       </div>
 
       {showForm && (
-        <div className="reveal" style={{background:'var(--card)',border:'1px solid var(--border2)',borderRadius:20,padding:'36px',maxWidth:600,margin:'0 auto 56px',position:'relative'}}>
+        <div className="reveal" style={{background:'#0e1928',border:'1px solid var(--border2)',borderRadius:20,padding:'36px',maxWidth:600,margin:'0 auto 56px',position:'relative'}}>
           <div style={{position:'absolute',top:0,left:0,right:0,height:2,background:'linear-gradient(90deg,var(--blue),transparent)',borderRadius:'20px 20px 0 0'}}/>
           <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:20,fontWeight:700,marginBottom:24}}>Share Your Experience</h3>
           {success ? (
@@ -86,19 +86,19 @@ export default function Reviews(){
                   <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Your Name *</label>
                   <input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})}
                     placeholder="John Kamau"
-                    style={{width:'100%',background:'var(--deep)',border:'1px solid var(--border)',borderRadius:8,padding:'10px 14px',color:'var(--white)',fontSize:14,outline:'none'}}/>
+                    style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}/>
                 </div>
                 <div>
                   <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Email *</label>
                   <input required type="email" value={form.email} onChange={e=>setForm({...form,email:e.target.value})}
                     placeholder="john@example.com"
-                    style={{width:'100%',background:'var(--deep)',border:'1px solid var(--border)',borderRadius:8,padding:'10px 14px',color:'var(--white)',fontSize:14,outline:'none'}}/>
+                    style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}/>
                 </div>
               </div>
               <div style={{marginBottom:14}}>
                 <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Service Received</label>
                 <select value={form.service} onChange={e=>setForm({...form,service:e.target.value})}
-                  style={{width:'100%',background:'var(--deep)',border:'1px solid var(--border)',borderRadius:8,padding:'10px 14px',color:'var(--white)',fontSize:14,outline:'none'}}>
+                  style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}>
                   <option value="">Select service...</option>
                   {services.map(s=><option key={s} value={s}>{s}</option>)}
                 </select>
@@ -117,7 +117,7 @@ export default function Reviews(){
                 <textarea required value={form.comment} onChange={e=>setForm({...form,comment:e.target.value})}
                   placeholder="Tell others about your experience working with Kaliworks Technologies..."
                   rows={4}
-                  style={{width:'100%',background:'var(--deep)',border:'1px solid var(--border)',borderRadius:8,padding:'10px 14px',color:'var(--white)',fontSize:14,outline:'none',resize:'vertical'}}/>
+                  style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none',resize:'vertical'}}/>
               </div>
               {error && <p style={{color:'#ef4444',fontSize:13,marginBottom:14}}>{error}</p>}
               <button type="submit" disabled={loading}
@@ -137,7 +137,7 @@ export default function Reviews(){
       ) : (
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}} className="rev-grid">
           {reviews.map(r=>(
-            <div key={r.id} className="reveal" style={{background:'var(--card)',border:'1px solid var(--border)',borderRadius:16,padding:24,transition:'all 0.3s'}}
+            <div key={r.id} className="reveal" style={{background:'#0e1928',border:'1px solid var(--border)',borderRadius:16,padding:24,transition:'all 0.3s'}}
               onMouseEnter={e=>{e.currentTarget.style.borderColor='var(--border2)';e.currentTarget.style.transform='translateY(-4px)'}}
               onMouseLeave={e=>{e.currentTarget.style.borderColor='var(--border)';e.currentTarget.style.transform='translateY(0)'}}>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:12}}>
