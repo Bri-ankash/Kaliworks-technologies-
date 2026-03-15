@@ -3,6 +3,24 @@ import { supabase } from '../lib/supabase'
 import { containsVulgar } from '../lib/filter'
 
 const STARS = [1,2,3,4,5]
+const inputStyle = {
+  width:'100%',
+  background:'#1e293b',
+  border:'1px solid #38bdf8',
+  borderRadius:8,
+  padding:'12px 14px',
+  color:'#ffffff',
+  fontSize:14,
+  outline:'none',
+  marginTop:4
+}
+const labelStyle = {
+  color:'#94a3b8',
+  fontSize:12,
+  fontWeight:600,
+  display:'block',
+  marginBottom:4
+}
 
 export default function Reviews(){
   const [reviews, setReviews] = useState([])
@@ -10,9 +28,7 @@ export default function Reviews(){
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
-  const [form, setForm] = useState({
-    name:'', email:'', rating:5, comment:'', service:''
-  })
+  const [form, setForm] = useState({name:'',email:'',rating:5,comment:'',service:''})
 
   useEffect(()=>{ fetchReviews() },[])
 
@@ -29,11 +45,11 @@ export default function Reviews(){
     e.preventDefault()
     setError('')
     if(containsVulgar(form.comment) || containsVulgar(form.name)){
-      setError('Your review contains inappropriate language. Please revise and resubmit.')
+      setError('Your review contains inappropriate language. Please revise.')
       return
     }
     if(form.comment.length < 20){
-      setError('Please write at least 20 characters in your review.')
+      setError('Please write at least 20 characters.')
       return
     }
     setLoading(true)
@@ -57,7 +73,7 @@ export default function Reviews(){
   ]
 
   return(
-    <section id="reviews" style={{background:'var(--deep)',padding:'96px 6%',position:'relative',zIndex:1}}>
+    <section id="reviews" style={{background:'#060b12',padding:'96px 6%',position:'relative',zIndex:1}}>
       <div className="reveal" style={{display:'flex',alignItems:'flex-end',justifyContent:'space-between',flexWrap:'wrap',gap:16,marginBottom:56}}>
         <div>
           <div className="eyebrow">Client Reviews</div>
@@ -65,15 +81,15 @@ export default function Reviews(){
           <p className="sec-sub">Real reviews from real clients. Every review is verified before publishing.</p>
         </div>
         <button onClick={()=>setShowForm(!showForm)}
-          style={{background:'var(--blue)',color:'#000',padding:'12px 28px',borderRadius:10,fontWeight:700,fontSize:14,border:'none',cursor:'pointer',flexShrink:0}}>
-          ✍️ Leave a Review
+          style={{background:'#0ea5e9',color:'#000',padding:'12px 28px',borderRadius:10,fontWeight:700,fontSize:14,border:'none',cursor:'pointer',flexShrink:0}}>
+          ✍️ {showForm ? 'Close Form' : 'Leave a Review'}
         </button>
       </div>
 
+      {/* FORM */}
       {showForm && (
-        <div className="reveal" style={{background:'#0e1928',border:'1px solid var(--border2)',borderRadius:20,padding:'36px',maxWidth:600,margin:'0 auto 56px',position:'relative'}}>
-          <div style={{position:'absolute',top:0,left:0,right:0,height:2,background:'linear-gradient(90deg,var(--blue),transparent)',borderRadius:'20px 20px 0 0'}}/>
-          <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:20,fontWeight:700,marginBottom:24}}>Share Your Experience</h3>
+        <div style={{background:'#0f172a',border:'2px solid #0ea5e9',borderRadius:20,padding:32,maxWidth:600,margin:'0 auto 56px'}}>
+          <h3 style={{fontFamily:'Urbanist,sans-serif',fontSize:20,fontWeight:700,marginBottom:24,color:'#ffffff'}}>Share Your Experience</h3>
           {success ? (
             <div style={{textAlign:'center',padding:'32px 0'}}>
               <div style={{fontSize:48,marginBottom:12}}>🎉</div>
@@ -81,82 +97,89 @@ export default function Reviews(){
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:14,marginBottom:14}} className="form-grid">
+              <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,marginBottom:16}} className="form-grid">
                 <div>
-                  <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Your Name *</label>
+                  <label style={labelStyle}>Your Name *</label>
                   <input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})}
-                    placeholder="John Kamau"
-                    style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}/>
+                    placeholder="John Kamau" style={inputStyle}/>
                 </div>
                 <div>
-                  <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Email *</label>
+                  <label style={labelStyle}>Email *</label>
                   <input required type="email" value={form.email} onChange={e=>setForm({...form,email:e.target.value})}
-                    placeholder="john@example.com"
-                    style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}/>
+                    placeholder="john@example.com" style={inputStyle}/>
                 </div>
               </div>
-              <div style={{marginBottom:14}}>
-                <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Service Received</label>
-                <select value={form.service} onChange={e=>setForm({...form,service:e.target.value})}
-                  style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none'}}>
+
+              <div style={{marginBottom:16}}>
+                <label style={labelStyle}>Service Received</label>
+                <select value={form.service} onChange={e=>setForm({...form,service:e.target.value})} style={inputStyle}>
                   <option value="">Select service...</option>
                   {services.map(s=><option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
-              <div style={{marginBottom:14}}>
-                <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:8}}>Rating *</label>
-                <div style={{display:'flex',gap:8}}>
+
+              <div style={{marginBottom:16}}>
+                <label style={labelStyle}>Rating *</label>
+                <div style={{display:'flex',gap:8,marginTop:8}}>
                   {STARS.map(s=>(
                     <span key={s} onClick={()=>setForm({...form,rating:s})}
-                      style={{fontSize:28,cursor:'pointer',transition:'transform 0.2s',transform:form.rating>=s?'scale(1.2)':'scale(1)',filter:form.rating>=s?'brightness(1)':'brightness(0.3)'}}>⭐</span>
+                      style={{fontSize:32,cursor:'pointer',opacity:form.rating>=s?1:0.3,transition:'all 0.2s'}}>⭐</span>
                   ))}
                 </div>
               </div>
+
               <div style={{marginBottom:20}}>
-                <label style={{color:'var(--muted)',fontSize:12,fontWeight:600,display:'block',marginBottom:6}}>Your Review * (min 20 characters)</label>
+                <label style={labelStyle}>Your Review * (min 20 characters)</label>
                 <textarea required value={form.comment} onChange={e=>setForm({...form,comment:e.target.value})}
-                  placeholder="Tell others about your experience working with Kaliworks Technologies..."
-                  rows={4}
-                  style={{width:'100%',background:'#1a2a3a',border:'1px solid rgba(14,165,233,0.3)',borderRadius:8,padding:'10px 14px',color:'#e8f4ff',fontSize:14,outline:'none',resize:'vertical'}}/>
+                  placeholder="Tell others about your experience with Kaliworks Technologies..."
+                  rows={4} style={{...inputStyle,resize:'vertical'}}/>
               </div>
-              {error && <p style={{color:'#ef4444',fontSize:13,marginBottom:14}}>{error}</p>}
+
+              {error && <p style={{color:'#ef4444',fontSize:13,marginBottom:14,background:'rgba(239,68,68,0.1)',padding:'10px 14px',borderRadius:8}}>{error}</p>}
+
               <button type="submit" disabled={loading}
-                style={{background:'var(--blue)',color:'#000',padding:'12px 28px',borderRadius:10,fontWeight:700,fontSize:14,border:'none',cursor:'pointer',width:'100%'}}>
-                {loading ? 'Submitting...' : 'Submit Review'}
+                style={{background:'#0ea5e9',color:'#000',padding:'13px 28px',borderRadius:10,fontWeight:700,fontSize:15,border:'none',cursor:'pointer',width:'100%'}}>
+                {loading ? 'Submitting...' : '✅ Submit Review'}
               </button>
             </form>
           )}
         </div>
       )}
 
+      {/* REVIEWS GRID */}
       {reviews.length === 0 ? (
         <div className="reveal" style={{textAlign:'center',padding:'60px 0'}}>
           <div style={{fontSize:48,marginBottom:16}}>⭐</div>
-          <p style={{color:'var(--muted)',fontSize:15}}>Be the first to leave a review!</p>
+          <p style={{color:'#7a99bb',fontSize:15}}>Be the first to leave a review!</p>
         </div>
       ) : (
         <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}} className="rev-grid">
           {reviews.map(r=>(
-            <div key={r.id} className="reveal" style={{background:'#0e1928',border:'1px solid var(--border)',borderRadius:16,padding:24,transition:'all 0.3s'}}
-              onMouseEnter={e=>{e.currentTarget.style.borderColor='var(--border2)';e.currentTarget.style.transform='translateY(-4px)'}}
-              onMouseLeave={e=>{e.currentTarget.style.borderColor='var(--border)';e.currentTarget.style.transform='translateY(0)'}}>
+            <div key={r.id} className="reveal" style={{background:'#0a1220',border:'1px solid rgba(14,165,233,0.15)',borderRadius:16,padding:24,transition:'all 0.3s'}}
+              onMouseEnter={e=>{e.currentTarget.style.borderColor='#0ea5e9';e.currentTarget.style.transform='translateY(-4px)'}}
+              onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(14,165,233,0.15)';e.currentTarget.style.transform='translateY(0)'}}>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',marginBottom:12}}>
-                <div style={{width:44,height:44,borderRadius:'50%',background:'linear-gradient(135deg,var(--blue),#0284c7)',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'Urbanist,sans-serif',fontWeight:800,fontSize:18,color:'#000'}}>
+                <div style={{width:44,height:44,borderRadius:'50%',background:'linear-gradient(135deg,#0ea5e9,#0284c7)',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'Urbanist,sans-serif',fontWeight:800,fontSize:18,color:'#000'}}>
                   {r.name.charAt(0).toUpperCase()}
                 </div>
                 <div style={{display:'flex',gap:2}}>
-                  {STARS.map(s=><span key={s} style={{fontSize:14,filter:r.rating>=s?'brightness(1)':'brightness(0.3)'}}>⭐</span>)}
+                  {STARS.map(s=><span key={s} style={{fontSize:14,opacity:r.rating>=s?1:0.2}}>⭐</span>)}
                 </div>
               </div>
-              <p style={{color:'var(--white)',fontWeight:600,fontSize:14,marginBottom:4}}>{r.name}</p>
-              {r.service && <p style={{color:'var(--blue)',fontSize:11,fontWeight:600,marginBottom:10,textTransform:'uppercase',letterSpacing:'0.5px'}}>{r.service}</p>}
-              <p style={{color:'var(--muted)',fontSize:13,lineHeight:1.7,fontWeight:300}}>{r.comment}</p>
-              <p style={{color:'var(--faint)',fontSize:11,marginTop:12}}>{new Date(r.created_at).toLocaleDateString('en-KE',{year:'numeric',month:'short',day:'numeric'})}</p>
+              <p style={{color:'#ffffff',fontWeight:600,fontSize:14,marginBottom:4}}>{r.name}</p>
+              {r.service && <p style={{color:'#0ea5e9',fontSize:11,fontWeight:600,marginBottom:10,textTransform:'uppercase',letterSpacing:'0.5px'}}>{r.service}</p>}
+              <p style={{color:'#7a99bb',fontSize:13,lineHeight:1.7,fontWeight:300}}>{r.comment}</p>
+              <p style={{color:'#3a5270',fontSize:11,marginTop:12}}>{new Date(r.created_at).toLocaleDateString('en-KE',{year:'numeric',month:'short',day:'numeric'})}</p>
             </div>
           ))}
         </div>
       )}
-      <style>{`@media(max-width:900px){.rev-grid{grid-template-columns:1fr 1fr!important}.form-grid{grid-template-columns:1fr!important}}@media(max-width:600px){.rev-grid{grid-template-columns:1fr!important}}`}</style>
+      <style>{`
+        @media(max-width:900px){.rev-grid{grid-template-columns:1fr 1fr!important}.form-grid{grid-template-columns:1fr!important}}
+        @media(max-width:600px){.rev-grid{grid-template-columns:1fr!important}}
+        input::placeholder,textarea::placeholder{color:#475569}
+        select option{background:#1e293b;color:#ffffff}
+      `}</style>
     </section>
   )
 }
