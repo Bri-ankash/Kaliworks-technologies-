@@ -11,7 +11,7 @@ const projects=[
     desc:'Full chama management SaaS — contributions, loans, meetings, M-Pesa integration, multi-role dashboards.',
     long:'A complete digital solution for chama groups in Kenya. Features include member management, contribution tracking, loan management with approval workflows, meeting scheduling, M-Pesa STK push integration, and role-based dashboards for admins, treasurers and members.',
     tags:['Django','Next.js','PostgreSQL','M-Pesa'],
-    link:'https://chamanakash-frontend-b3z4fnkc4-bri-ankashs-projects.vercel.app',
+    link:'https://chamanakash-page.onrender.com',
     status:'live'
   },
   {
